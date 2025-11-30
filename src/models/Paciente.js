@@ -4,11 +4,13 @@ export default class Paciente extends Model {
 
   static init(sequelize) {
     super.init({
-      nome: Sequelize.STRING,
-      sobrenome: Sequelize.STRING,
+      nomecompleto: Sequelize.STRING,
+      cpf: Sequelize.STRING,
       email: Sequelize.STRING,
       idade: Sequelize.INTEGER,
-      cpf: Sequelize.STRING,
+      genero: Sequelize.STRING,
+      endereco: Sequelize.STRING,
+      numero: Sequelize.INTEGER
 
     }, {
 
