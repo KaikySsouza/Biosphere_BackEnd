@@ -7,17 +7,25 @@ export default class User extends Model {
 
   static init(sequelize) {
     super.init({
-      nome:{
+      nome_completo:{
         type: Sequelize.STRING,
         defaultValue: '',
         validate: {
           len: {
-            args:[5, 100],
+            args:[5, 255],
             msg: 'Campo nome não pode ficar vazio',
-
           }
         }
       },
+      
+      cpf: {
+        type: Sequelize.STRING,
+        defaultValue: '',
+        unique: {
+          msg: 'CPF já cadastrado...'
+        },
+      },
+
 
         email:{
         type: Sequelize.STRING,
@@ -30,6 +38,27 @@ export default class User extends Model {
             msg: 'Está email é invalido'
           }
         }
+      },
+
+      telefone: {
+      type: Sequelize.STRING,
+      defaultValue: '',
+      },
+
+      idade: {
+        type: Sequelize.STRING,
+      },
+
+      genero: {
+        type: Sequelize.STRING
+      },
+
+      endereco: {
+        type: Sequelize.STRING,
+      },
+
+      numero: {
+        type: Sequelize.STRING,
       },
 
         password_hash: {

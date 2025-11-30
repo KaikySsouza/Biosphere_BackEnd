@@ -11,17 +11,50 @@ module.exports = {
         primaryKey: true,
       },
 
-      nome: {
+      nome_completo: {
         type: Sequelize.STRING,
         allowNull: false,
 
       },
+
+      cpf: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true
+      },
+
+
 
        email: {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true,
 
+      },
+
+      telefone: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+
+      idade: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+
+      genero: {
+        type: Sequelize.STRING, //arrumar esse db
+        allowNull: false
+      },
+
+      endereco: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+
+      numero: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
 
       password_hash: {

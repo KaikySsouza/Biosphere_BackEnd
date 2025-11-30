@@ -4,7 +4,11 @@ export default class Paciente extends Model {
 
   static init(sequelize) {
     super.init({
-      nomecompleto: Sequelize.STRING,
+      nome_completo:{
+
+        type:Sequelize.STRING
+        
+      },
       cpf: Sequelize.STRING,
       email: Sequelize.STRING,
       idade: Sequelize.INTEGER,
